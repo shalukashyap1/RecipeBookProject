@@ -1,0 +1,46 @@
+<div class="container-fluid d-flex p-5 justify-content-center align-items-center">
+    <div class="box  ">
+        <h2 class="text text-light text-center">Register </h2>
+        <div class="col-12">
+            <div class="con p-3">
+                <form [formGroup]="userForm" (ngSubmit)="userData()">
+                    <div class="mb-3">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" formControlName="Name" required
+                            placeholder="User Name"><br>
+                        <div class="alert alert-info" *ngIf="!f['Name'].valid && f['Name'].touched">
+                            Name must contain atleast 5 characters
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">User Email</label>
+                        <input type="email" class="form-control" formControlName="userName" required
+                            placeholder="User Email"><br>
+                        <div class="alert alert-info" *ngIf="!f['userName'].valid && f['userName'].touched">
+                            felled the valid email
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Mobile Number</label>
+                        <input type="text" class="form-control" formControlName="phone" required
+                            placeholder="Contact Number"><br>
+                        <div class="alert alert-info" *ngIf="!f['phone'].valid && f['phone'].touched">
+                            There must be 10 digits
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">City</label>
+                        <input type="text" class="form-control" formControlName="city" required
+                            placeholder="City Name"><br>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <button type="submit" class=" submit bg-danger text-white"
+                            [disabled]="!userForm.valid">Submit</button>
+                        </div>
+    
+                </form>
+    
+    
+            </div>
+</div>

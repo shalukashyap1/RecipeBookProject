@@ -1,0 +1,13 @@
+.container-fluid{
+    height: 580px;
+    font-family: jokerman;
+}
+h1 ,p{
+    font-size: 50px;
+    font-weight: 600;
+    color: brown;
+}
+img{
+    width: 150px;
+    height: 150px;
+}

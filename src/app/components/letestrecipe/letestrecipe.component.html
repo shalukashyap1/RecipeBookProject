@@ -1,0 +1,19 @@
+<div class="container">
+    <button type="submit" class="btn btn-primary" (click)="openmodel()">Add Item</button>
+
+</div> 
+ <div class="container-fluid p-5">
+    <div class="box  d-flex">
+       
+            <div class="card me-5" *ngFor="let d of userdata">
+              <img src={{d.img}} alt="" width="200px" height="200px">
+              <h1 class="title">{{d.title}}</h1>
+              <h5 class="price">{{d.price}}</h5>
+              <button type="submit" class="btn btn-primary">Buy</button>
+              <button type="submit" class="btn btn-warning mt-2" (click)="add(d.id)">add to cart</button>
+            </div>
+        </div>
+ 
+</div>
+
+

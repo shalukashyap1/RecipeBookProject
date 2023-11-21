@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card me-5" style="width:18rem;"*ngFor="let d of data" >
+    <img src={{d.img}} alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{d.name}}</h5>
+        
+        <a href="" class="btn btn-primary " routerLink="/recipes/{{d.id}}" (click)="showRecipe(d.id)">Show Recipe</a>
+        <a href="" class="btn btn-primary mt-2">Back</a>
+    </div>
+    </div>
+    
+</div>
+<div class="des" *ngIf="resId!==undefined" >  
+   <div class="row bg-warning">
+    <h3>Ingredients</h3>
+    {{_demoserviceService.getdescriptionById(resId)?.items}}
+   </div>
+   <br>
+   <br>
+   <div class="row bg-success">
+    <h3>Mathod</h3>
+    {{_demoserviceService.getdescriptionById(resId)?.body}}
+   </div>
+</div>

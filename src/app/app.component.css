@@ -1,0 +1,17 @@
+nav{
+    border-bottom: 2px solid rgb(245, 239, 239);
+}
+img{
+    width: 100px;
+    height: 60px;
+    margin-left: 50px;
+   
+}
+.form-item ul li{
+    list-style-type: none;
+        margin: 10px 20px;
+}
+
+
+
+
